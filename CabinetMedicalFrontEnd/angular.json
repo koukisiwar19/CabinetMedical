@@ -25,6 +25,8 @@
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "node_modules/ngx-toastr/toastr.css",
               "src/assets/scss/now-ui-dashboard.scss",
+              "node_modules/@fullcalendar/common/main.css",
+              "node_modules/@fullcalendar/daygrid/main.css",
               "src/assets/demo/demo.css"
             ],
             "scripts": [
@@ -82,6 +84,8 @@
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "node_modules/ngx-toastr/toastr.css",
               "src/assets/scss/now-ui-dashboard.scss",
+              "node_modules/jquery/dist/jquery.js",
+
               "src/assets/demo/demo.css"
             ],
             "assets": [

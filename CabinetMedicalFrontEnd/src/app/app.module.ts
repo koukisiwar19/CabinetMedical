@@ -27,6 +27,7 @@ import { VisteComponent } from './viste/viste.component';
     RouterModule,
     AppRoutingModule,
     NgbModule,
+     
     ToastrModule.forRoot()
   ],
   declarations: [
