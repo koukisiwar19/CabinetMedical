@@ -5,4 +5,5 @@ export class Patient {
     date_naissance: string;
     num_tel: string;
     adresse: string;
+    createdAt: Date;
 }
