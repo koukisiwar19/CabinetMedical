@@ -9,7 +9,7 @@ import {
     ParseIntPipe,
     Post,
     Put,
-    Query
+    Query, UseFilters
 } from '@nestjs/common';
 import { Patient } from './Models/patient';
 import {ExceptionHandler} from "@nestjs/core/errors/exception-handler";
@@ -17,7 +17,8 @@ import {GetPaginatedPatientsDto} from "./DTO/get-paginated-patients.dto";
 import {AddPatientDto} from "./DTO/add-patient.dto";
 import {PatientService} from "./patient.service";
 import {ErrorHttpStatusCode} from "@nestjs/common/utils/http-error-by-code.util";
-
+import {FlubErrorHandler} from "nestjs-flub/dist";
+@UseFilters(new FlubErrorHandler())
 @Controller('patients')
 export class PatientController {
     constructor(private patientService: PatientService) {
@@ -28,7 +29,7 @@ export class PatientController {
     getPatients(
         @Query() mesQueryParams : GetPaginatedPatientsDto
     ){
-        console.log('Patients')
+        console.log(mesQueryParams instanceof GetPaginatedPatientsDto)
         return this.patientService.getPatients();
     }
     @Get('/:id')
@@ -67,4 +68,9 @@ export class PatientController {
 
 
     }
+    @Get('/error')
+    throwError() {
+        throw new Error('Very Bad Error');
+    }
+
 }
