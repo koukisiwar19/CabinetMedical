@@ -14,11 +14,6 @@ import { GererpharmacieComponent } from '../../gererpharmacie/gererpharmacie.com
 import { FormuledesatisfactionComponent } from '../../formuledesatisfaction/formuledesatisfaction.component';
 import { VisteComponent } from '../../viste/viste.component';
  
-
-
-
-
- 
 @NgModule({
   imports: [
     CommonModule,

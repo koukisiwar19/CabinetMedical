@@ -16,4 +16,5 @@ export const AdminLayoutRoutes: Routes = [
     {path :'gererpharmacie', component: GererpharmacieComponent},
     {path : 'formuledesatisfaction', component:FormuledesatisfactionComponent},
     {path : 'visite', component: VisteComponent}
+    
 ];

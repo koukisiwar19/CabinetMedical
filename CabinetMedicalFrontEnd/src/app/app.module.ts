@@ -17,6 +17,7 @@ import { GereconsultationComponent } from './gereconsultation/gereconsultation.c
 import { GererpharmacieComponent } from './gererpharmacie/gererpharmacie.component';
 import { FormuledesatisfactionComponent } from './formuledesatisfaction/formuledesatisfaction.component';
 import { VisteComponent } from './viste/viste.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -27,17 +28,18 @@ import { VisteComponent } from './viste/viste.component';
     RouterModule,
     AppRoutingModule,
     NgbModule,
-     
     ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    
-    
+    LoginComponent,
+
+
 
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
