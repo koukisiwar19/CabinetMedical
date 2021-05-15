@@ -4,11 +4,30 @@ import { AppService } from './app.service';
 import { PatientModule } from './patient/patient.module';
 import {PremierMiddleware} from "./middlewares/premier.middleware";
 import {logger} from "./middlewares/logger.middleware";
-import {HelmetMiddleware} from "@nest-middlewares/helmet";
-import {FlubErrorHandler} from "nestjs-flub/dist";
+import {ConfigModule} from "@nestjs/config";
+import {TypeOrmModule} from "@nestjs/typeorm";
+import  * as dotenv from 'dotenv';
+
+dotenv.config();
 
 @Module({
-  imports: [PatientModule],
+  imports: [
+      PatientModule,
+      ConfigModule.forRoot({
+        isGlobal: true
+      }),
+    TypeOrmModule.forRoot({
+      type: 'mysql' ,
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT),
+      username: 'root',
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+      entities: ["dist/**/*.entity{.ts,.js}"],
+      synchronize: true,
+      autoLoadEntities: true
+    }),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
@@ -16,7 +35,7 @@ export class AppModule implements NestModule{
   configure(consumer: MiddlewareConsumer): any {
     consumer.apply(PremierMiddleware).forRoutes('patients')
         .apply(logger).forRoutes('patients')
-        .apply(HelmetMiddleware).forRoutes('')
+
 
   }
 }
