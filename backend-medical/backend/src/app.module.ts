@@ -6,6 +6,7 @@ import {PremierMiddleware} from "./middlewares/premier.middleware";
 import {logger} from "./middlewares/logger.middleware";
 import {ConfigModule} from "@nestjs/config";
 import {TypeOrmModule} from "@nestjs/typeorm";
+import { UserModule } from './User/user.module';
 import  * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -27,6 +28,7 @@ dotenv.config();
       synchronize: true,
       autoLoadEntities: true
     }),
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
