@@ -14,18 +14,24 @@ export class UserService {
     ) {
     }
     
-    async subscribe(userData: UserSubscribeDto): Promise<UserEntity>{
+    async subscribe(userData: UserSubscribeDto): Promise<Partial<UserEntity>>{
         const user= this.userRepository.create({
             ...userData
         });
         user.salt = await bcrypt.genSalt();
         user.password = await bcrypt.hash(user.password, user.salt);
         try {
-            this.userRepository.save(user);
+            await this.userRepository.save(user);
         } catch (e){
-            throw new ConflictException(`Le username et le password doivent être uniques`)
+            throw new ConflictException(`Le username et le email doivent être uniques`)
         }
-        return user;
+
+        return {
+            id: user.id,
+            username: user.username,
+            email: user.email,
+            password: user.password
+        };
     }
 
 }
