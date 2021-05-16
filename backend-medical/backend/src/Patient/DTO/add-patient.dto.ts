@@ -53,5 +53,7 @@ export class AddPatientDto {
         'Femme'
     ])
     sexe: string
+    @IsNotEmpty()
+    assurance: boolean;
 
 }

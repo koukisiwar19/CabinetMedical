@@ -2,7 +2,7 @@ import {
     IS_BTC_ADDRESS,
     IsBtcAddress,
     IsDate,
-    IsDateString,
+    IsDateString, IsIn,
     IsNotEmpty, IsOptional,
     IsPhoneNumber,
     IsString,
@@ -50,4 +50,12 @@ export class updatePatientDto {
     })
     @IsOptional()
     path:string;
+    @IsNotEmpty()
+    @IsIn([
+        'Homme',
+        'Femme'
+    ])
+    sexe: string
+    @IsNotEmpty()
+    assurance: boolean;
 }

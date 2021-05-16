@@ -1,6 +1,5 @@
 import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn} from "typeorm";
 import {TimestampEntites} from "../../Generics/timestamp.entities";
-import {UserRoleEnum} from "../../enums/user-role.enum";
 import {sexeEnum} from "../../enums/sexe.enum";
 
 
@@ -19,11 +18,13 @@ export class Patient extends TimestampEntites{
     @Column()
     adresse: string;
     @Column()
-    path: string
+    path: string;
     @Column({
         type: "enum",
         enum: sexeEnum,
         default: sexeEnum.femme
     })
     sexe: string
+    @Column()
+    assurance: boolean;
 }

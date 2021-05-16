@@ -7,6 +7,9 @@ import {logger} from "./middlewares/logger.middleware";
 import {ConfigModule} from "@nestjs/config";
 import {TypeOrmModule} from "@nestjs/typeorm";
 import { UserModule } from './User/user.module';
+import { ConsultationModule } from './consultation/consultation.module';
+
+import { PharmacieModule } from './pharmacie/pharmacie.module';
 import  * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -29,6 +32,9 @@ dotenv.config();
       autoLoadEntities: true
     }),
     UserModule,
+    ConsultationModule,
+
+    PharmacieModule,
   ],
   controllers: [AppController],
   providers: [AppService],
