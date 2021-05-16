@@ -1,8 +1,9 @@
 import {TimestampEntites} from "../../Generics/timestamp.entities";
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typeorm";
+import {Patient} from "./patient.entity";
 
 @Entity('antecedent')
-export class Antecedent extends TimestampEntites
+export class Antecedent
 {
     @PrimaryGeneratedColumn()
     id: number;
@@ -10,5 +11,9 @@ export class Antecedent extends TimestampEntites
     nom: string;
     @Column()
     description: string;
+    @ManyToMany(() => Patient)
+    @JoinTable()
+    patient: Patient[]
+
 
 }

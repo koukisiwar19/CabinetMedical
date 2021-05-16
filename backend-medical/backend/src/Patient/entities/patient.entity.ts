@@ -27,4 +27,6 @@ export class Patient extends TimestampEntites{
     sexe: string
     @Column()
     assurance: boolean;
+    @Column()
+    profession: string;
 }
