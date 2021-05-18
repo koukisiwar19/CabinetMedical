@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { APIS } from './../../APIS/apis';
+import { DeleteResponseDto } from '../dto/delete-response.dto';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,13 @@ private consultations: Consultation [] = [];
   addConsultation(consultation: Consultation): Observable< Consultation> {
     return this.http.post<Consultation>(APIS.consultation, consultation);
 
+}
+getConsultationById(id: number): Observable<Consultation> {
+
+  return this.http.get<Consultation>(APIS.patient + id);
+}
+deleteConsultation(id: number): Observable<DeleteResponseDto> {
+
+  return this.http.delete<DeleteResponseDto>(APIS.patient + id);
 }
 }

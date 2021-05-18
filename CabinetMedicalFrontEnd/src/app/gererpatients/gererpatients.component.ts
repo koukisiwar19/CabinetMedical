@@ -1,3 +1,4 @@
+
 import { PatientserviceService } from './services/patientservice.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -20,9 +21,9 @@ export class GererpatientsComponent implements OnInit {
   }
   addPatient(formulaire : NgForm) {
     this.patientservice.addPatient(formulaire.value).subscribe(
-      (cv) => {
+      (Patient) => {
         this.toaster.success(
-          `Le Patient de ${Patient.name}  a été ajouté avec succès`
+          `Le Patient de ${Patient.nom} ${Patient.prenom}  a été ajouté avec succès`
         );
         this.router.navigate(['patient']);
       },

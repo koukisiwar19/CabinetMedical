@@ -25,11 +25,7 @@ export class PatientserviceService {
     return this.http.get<Patient>(APIS.patient + id);
   }
   deletePatient(id: number): Observable<DeleteResponseDto> {
-   /*  const params = new HttpParams().set(
-      'access_token',
-      localStorage.getItem('token')
-    ); */
-    // '1' == 1 mais '1' !== 1
+  
     return this.http.delete<DeleteResponseDto>(APIS.patient + id);
   }
 }
