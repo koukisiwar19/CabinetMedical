@@ -18,6 +18,9 @@ import { GererpharmacieComponent } from './gererpharmacie/gererpharmacie.compone
 import { FormuledesatisfactionComponent } from './formuledesatisfaction/formuledesatisfaction.component';
 import { VisteComponent } from './viste/viste.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './Profil/profile/profile.component';
+import { DetailComponent } from './Profil/detail/detail.component';
+import { ListComponent } from './Profil/list/list.component';
 
 @NgModule({
   imports: [
@@ -33,7 +36,8 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent,
+
+
 
 
 

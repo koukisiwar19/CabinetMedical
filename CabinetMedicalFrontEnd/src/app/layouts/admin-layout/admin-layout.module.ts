@@ -1,3 +1,5 @@
+import { DetailComponent } from './../../Profil/detail/detail.component';
+import { ListComponent } from './../../Profil/list/list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -13,7 +15,9 @@ import { GereconsultationComponent } from '../../gereconsultation/gereconsultati
 import { GererpharmacieComponent } from '../../gererpharmacie/gererpharmacie.component';
 import { FormuledesatisfactionComponent } from '../../formuledesatisfaction/formuledesatisfaction.component';
 import { VisteComponent } from '../../viste/viste.component';
- 
+import {ProfileComponent } from '../../Profil/profile/profile.component';
+import { from } from 'rxjs';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -31,10 +35,13 @@ import { VisteComponent } from '../../viste/viste.component';
     GererpharmacieComponent,
     FormuledesatisfactionComponent,
     VisteComponent,
-  
+    ProfileComponent,
+    ListComponent,
+    DetailComponent,
 
-    
-    
+
+
+
   ]
 })
 
