@@ -1,3 +1,4 @@
+import { MedicamentComponent } from './../../medicament/medicament.component';
 import { DetailComponent } from './../../Profil/detail/detail.component';
 import { ListComponent } from './../../Profil/list/list.component';
 import { ProfileComponent } from './../../Profil/profile/profile.component';
@@ -22,5 +23,6 @@ export const AdminLayoutRoutes: Routes = [
     {path: 'list', component : ListComponent},
     {path : 'detail', component: DetailComponent},
     {path : 'profile', component : ProfileComponent},
+    {path : 'medicament', component: MedicamentComponent},
 
 ];

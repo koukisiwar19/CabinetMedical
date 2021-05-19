@@ -3,4 +3,5 @@ patient:'',
 consultation: '',
 formulaire:'',
 medicament : '',
+medicaments :'',
 };

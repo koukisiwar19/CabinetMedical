@@ -37,7 +37,8 @@ import { MedicamentComponent } from './medicament/medicament.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    MedicamentComponent,
+
+
 
 
 

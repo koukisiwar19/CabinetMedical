@@ -12,9 +12,11 @@ export const ROUTES: RouteInfo[] = [
     {path : '/visite', title: 'Visite',icon:'',class: ''},
     { path: '/gereconsultation', title:' Consultation', icon: '', class:''},
     {path: '/gererpharmacie', title: ' Pharmacie ',icon:'',class:''},
+    { path: '/medicament', title: 'Medicaments', icon:'', class:''},
     { path : '/formuledesatisfaction', title: 'Formulaire de Satisfaction', icon:'', class:''},
     { path: '/Profile', title: 'Profile',  icon:'', class: '' },
     { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: 'active active-pro' }
+
 
 
 ];

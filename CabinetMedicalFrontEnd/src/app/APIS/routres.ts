@@ -3,4 +3,5 @@ export const routes = {
   consultation :'consultation',
   formulaire : '',
   medicament : '',
+  medicaments :'',
 };

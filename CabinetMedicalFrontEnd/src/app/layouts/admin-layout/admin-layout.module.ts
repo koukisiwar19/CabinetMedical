@@ -1,3 +1,4 @@
+import { MedicamentComponent } from './../../medicament/medicament.component';
 import { DetailComponent } from './../../Profil/detail/detail.component';
 import { ListComponent } from './../../Profil/list/list.component';
 import { NgModule } from '@angular/core';
@@ -38,6 +39,7 @@ import { from } from 'rxjs';
     ProfileComponent,
     ListComponent,
     DetailComponent,
+    MedicamentComponent,
 
 
 
