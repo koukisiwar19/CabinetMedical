@@ -8,10 +8,10 @@
           <h5 class="title">Formulaire de satisfcation </h5>
         </div>
         <div class="card-body">
-          <form>
+          <form #formulaire="ngForm">
             <div class="row">
               <div class="col-md-4 pr-1">
-               
+
               </div>
               <div class="col-md-3 px-1">
                 <div class="form-group">
@@ -40,12 +40,14 @@
                 </div>
               </div>
             </div>
-           
-               
-           
-           
-              
-   
-            
-           <button  type="button" class="btn btn-danger" > Enregistrer </button> 
+
+
+
+
+
+
+
+           <button  [disabled]="formulaire.invalid"
+
+           (click)="addFormulaire(formulaire)" class="btn btn-danger" > Enregistrer </button>
           </form>

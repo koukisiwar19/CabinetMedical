@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './Profil/profile/profile.component';
 import { DetailComponent } from './Profil/detail/detail.component';
 import { ListComponent } from './Profil/list/list.component';
+import { MedicamentComponent } from './medicament/medicament.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { ListComponent } from './Profil/list/list.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    MedicamentComponent,
 
 
 
