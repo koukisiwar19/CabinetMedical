@@ -10,8 +10,13 @@ import { Formulaire } from '../Formulaire/formulaire';
   providedIn: 'root'
 })
 export class FormulaireserviceService {
+  private formulaires: Formulaire[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.formulaires = [
+      new Formulaire(),
+    ];
+  }
 
   addFormulaire(formulaire: Formulaire): Observable< Formulaire> {
     return this.http.post<Formulaire>(APIS.formulaire, formulaire);

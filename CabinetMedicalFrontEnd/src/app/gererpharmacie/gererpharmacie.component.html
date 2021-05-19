@@ -8,7 +8,7 @@
           <h5 class="title">Pharmacie  </h5>
         </div>
         <div class="card-body">
-            <form>
+            <form #formulaire="ngForm">
               <div class="row">
                 <div class="col-md-1 pr-1">
 
@@ -35,7 +35,9 @@
               </div>
 
               <div class="text-right">
-                <button  type="button" class="btn btn-primary" id="btn"> Enregistrer </button>
+                <button [disabled]="formulaire.invalid"
+
+                (click)="addMedicament(formulaire)"class="btn btn-primary" id="btn"> Enregistrer </button>
               </div>
 
 
