@@ -1,0 +1,13 @@
+
+<ol class="list-group">
+  <li
+    *ngFor="let actualProfile of profils; let odd = odd"
+    [ngClass]="{
+      'list-group-item-secondary': odd,
+      'list-group-item-primary': !odd
+    }"
+    class="list-group-item"
+  >
+    <app-item (selectPersonne)="forwardProfile($event)" [profile]="actualProfile"></app-item>
+  </li>
+</ol>

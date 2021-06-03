@@ -1,0 +1,26 @@
+<div class="panel-header panel-header-sm">
+</div>
+
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title"> Profile </h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-4 pr-1">
+
+              </div>
+<div class="row">
+  <div class="col-md-6 ">
+    <app-list (forwardSelectedProfile)="findSelectedProfile($event)"> </app-list>
+</div>
+
+<div class="col-md-8 col-16">
+  <app-detail [profile]="selectedProfile"></app-detail>
+</div>
+</div>
+
