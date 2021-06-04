@@ -6,4 +6,5 @@ medicament : '',
 medicaments :'',
 ordonnance :'',
 antecedent :'',
+effetSecondaire :'',
 };

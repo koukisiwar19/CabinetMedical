@@ -6,4 +6,5 @@ export const routes = {
   medicaments :'',
   ordonnance :'',
   antecedent :'',
+  effetSecondaire :'',
 };
